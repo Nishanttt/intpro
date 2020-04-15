@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GETTING STARTED WITH BRACKETS</title>
+    <meta name="description" content="">
+    <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+   var swiper = new Swiper( '.swiper-container.two', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		effect: 'coverflow',
+		loop: true,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		coverflow: {
+			rotate: 8,
+			stretch: 50,
+			depth: 60,
+			modifier: 1.5,
+			slideShadows : false,
+		}
+} ); 
+        
+        
+$('.slider-items').slick({
+  dots: false,
+  infinite: true,
+  centerMode: true,
+  slidesToShow: 1,
+  focusOnSelect:true,
+  centerPadding: '260px', 
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+      centerMode: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});  
+        
+    $('.header').on('click', '.search-icon', function(e) {
+    var selector = $(this).data('selector');
+
+    $(selector).toggleClass('show').find('.search-input').focus();
+    $('.header-search-group').slideToggle();
+    e.preventDefault();
+    });
+
+});
+
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="#"><img src="./images/logo.png" alt="Diamond scaasi"></a>
+                    </div>
+                </div>
+                <div class="col-md-6 primary-menu">
+                    <div class="primary-menu-inner">
+                        <div class="close-trigger"><span></span></div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Diamonds</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Fine Jewelery</a></li>
+                            <li><a href="#">WATCHES</a></li>
+                        </ul>
+                    </nav>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="header-icons">
+                        <a href="#" class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                        <div class="menu-trigger"><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-search-group">
+           <div class="container">
+             <div class="row">
+               <div class="col-md-12">
+                 <form role="search" action="" class="search-box">
+                  <input type="text" class="text search-input" placeholder="Type here to search..." />
+                 <i class="fa fa-search" aria-hidden="true"></i>
+                </form>
+               </div>
+              </div>
+           </div>
+        </div>
+        <div class="overlay"></div>
+    </header>
+    
+    <main class="main" role="main">
+        <section class="section-1">
+            <div class="top-slider-group">
+              <div class="container links-group">
+                <div class="inquiry">
+                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> Inquiry</a>
+                </div>
+                <div class="feedback"><a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Feedback</a></div>
+                <div class="social-icons">
+                    <a href="#" class="facebook"><i class="fa fa-facebook hover-icon" aria-hidden="true"></i><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" class="insta"><i class="fa fa-instagram hover-icon" aria-hidden="true"></i><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" class="twitter"><i class="fa fa-twitter hover-icon" aria-hidden="true"></i><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </div>
+                <div class="down-btn"><a href="#section-2"><i class="fa fa-angle-down hover-icon" aria-hidden="true"></i><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+                </div>
+                <div class="slider-wrapper">
+                    <div class="slider-items">
+                        <div class="slider-item">
+                            <div class="image-wrapper" style="background-image: url(./images/slide-img1.jpg);"></div>
+                            <div class="caption">
+                                <h2>Slide 1</h2>
+                                <h5>price 1</h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                        </div> 
+                        <div class="slider-item">
+                            <div class="image-wrapper" style="background-image: url(./images/slide-img2.jpg);"></div>
+                            <div class="caption">
+                                <h2>Slide 2</h2>
+                                <h5>price 2</h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                        </div> 
+                        <div class="slider-item">
+                            <div class="image-wrapper" style="background-image: url(./images/slide-img3.jpg);"></div>
+                            <div class="caption">
+                                <h2>Slide 3</h2>
+                                <h5>price 3</h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="btn-wrapper"><a href="#" class="btn">View Details</a></div>
+                </div>
+            </div>
+        </section>
+        <section class="section-2" id="section-2">
+            <div class="container">
+                <div class="top-group">
+                    <h3>Our Collection</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="bottom-group">
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <figure>
+                                <img src="./images/Dummy-image.jpg" alt="">
+                                <figcaption>
+                                    <h6>Lorem Ipsum</h6>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-xl-3">
+                            <figure>
+                                <img src="./images/Dummy-image.jpg" alt="">
+                                <figcaption>
+                                    <h6>Lorem Ipsum</h6>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-xl-3">
+                            <figure>
+                                <img src="./images/Dummy-image.jpg" alt="">
+                                <figcaption>
+                                    <h6>Lorem Ipsum</h6>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-xl-3">
+                            <figure>
+                                <img src="./images/Dummy-image.jpg" alt="">
+                                <figcaption>
+                                    <h6>Lorem Ipsum</h6>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-wrapper"></div>
+            </div>
+        </section>
+        <section class="section-3">
+            <div class="container">
+                <div class="category-slider-group">
+                    <div class="top-group">
+                        <h3>Explore Loose Diamonds</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="swiper-container two">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="image-wrapper"><img src="./images/Dummy-image.jpg" alt=""></div>
+                                <div class="caption">
+                                    <h4>Slide 1</h4>
+                                    <p>Caltion 1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="image-wrapper"><img src="./images/Dummy-image.jpg" alt=""></div>
+                                <div class="caption">
+                                    <h4>Slide 2</h4>
+                                    <p>Caltion 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="image-wrapper"><img src="./images/Dummy-image.jpg" alt=""></div>
+                                <div class="caption">
+                                    <h4>Slide 3</h4>
+                                    <p>Caltion 3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="image-wrapper"><img src="./images/Dummy-image.jpg" alt=""></div>
+                                <div class="caption">
+                                    <h4>Slide 4</h4>
+                                    <p>Caltion 4</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="image-wrapper"><img src="./images/Dummy-image.jpg" alt=""></div>
+                                <div class="caption">
+                                    <h4>Slide 5</h4>
+                                    <p>Caltion 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="image-wrapper"><img src="./images/Dummy-image.jpg" alt=""></div>
+                                <div class="caption">
+                                    <h4>Slide 6</h4>
+                                    <p>Caltion 6</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="image-wrapper"><img src="./images/Dummy-image.jpg" alt=""></div>
+                                <div class="caption">
+                                    <h4>Slide 7</h4>
+                                    <p>Caltion 7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-4">
+            <div class="container">
+                <div class="section-4-content-wrapper">
+                    <div class="row">
+                        <div class="col-xl-6 left-group">
+                            <h2>keep in Touch</h2>
+                            <p>Sub title</p>
+                            <form action="" method="">
+                              <div class="input"><input type="text" name="" placeholder="Enter your email"></div>
+                              <div class="action">
+                                <input type="submit" value="Sign Up" class="submit-btn">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xl-6 right-group">
+                            <div class="row">
+                                <div class="col-md-6"><img src="./images/img-1.jpg" alt=""></div>
+                                <div class="col-md-6"><img src="./images/img-2.jpg" alt=""></div>
+                                <div class="w-100"></div>
+                                <div class="col-md-6"><img src="./images/img-3.jpg" alt=""></div>
+                                <div class="col-md-6"><img src="./images/img-4.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-top-group">
+            <div class="container">
+                <div class="footer-logo">
+                    <div class="row">
+                        <div class="col-md-12">
+                          <img src="./images/dark-logo.png" alt="Diamond scaasi">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-group">
+                <div class="container">
+            <div class="footer-menu">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Customer Care</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-logo-images">
+                 <div class="row">
+                    <div class="col-md-12">
+                        <ul>
+                            <li><img src="./images/gia.png" alt="GIA"></li>
+                            <li><img src="./images/joa.png" alt="Jwellers of America"></li>
+                            <li><img src="./images/jvc.png" alt="JVC"></li>
+                            <li><img src="./images/bbb.png" alt="Accredited"></li>
+                            <li><img src="./images/yelp.png" alt="yelp"></li>
+                            <li><img src="./images/norton.png" alt="Norton"></li>
+                            <li><img src="./images/secure_shoping.png" alt="Secure Shopping"></li>
+                            <li><img src="./images/visa.png" alt="visa"></li>
+                            <li><img src="./images/master_card.png" alt="master card"></li>
+                            <li><img src="./images/am-ex.png" alt="American Express"></li>
+                            <li><img src="./images/discover.png" alt="Discover"></li>
+                            <li><img src="./images/paypal.png" alt="Paypal"></li>
+                            <li><img src="./images/comment.png" alt="comments"></li>
+                            <li><img src="./images/paypal_credit.png" alt="paypal credit"></li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>dimend SCAASI™ and InnerView® are Registered Trademark of dimend SCAASI Ltd. © 2010-2020 dimend SCAASI Ltd. <a href="#">Terms of Use</a>&nbsp;|&nbsp;<a href="#">Site Map</a>&nbsp;|&nbsp;<a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
